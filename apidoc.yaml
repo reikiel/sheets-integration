@@ -1,0 +1,40 @@
+swagger: "2.0"
+info:
+  title: Github Issues - Sheets Integration API
+  description: API to sync Github issues to Google Sheets
+  version: 1.0.0
+host: localhost:8080
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+
+paths:
+  /:
+    get:
+      description: Initialize headers of sheets
+      operationId: InitializeSheets
+      responses:
+        200:
+          description: Sheet initialized
+        500:
+          description: Error
+  /issue:
+    post:
+      description: Create or update issues on sheets
+      operationId: UpdateSheets
+      responses:
+        200:
+          description: Issue created/updated successfully
+        500:
+          description: Error
+    delete:
+      description: Clear sheets
+      operationId: ClearSheets
+      responses:
+        200:
+          description: Sheet cleared successfully
+        500:
+          description: Error

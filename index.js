@@ -166,10 +166,11 @@ app.delete("/issue", async (req, res) => {
       range: "Sheet1",
     });
     console.log("Sheet cleared");
+    res.status(200).send("Sheets successfully cleared");
   } catch (e) {
-    console.error(e);
+    console.log(e);
+    res.status(500).send("error");
   }
-  res.status(200).send();
 });
 
 app.listen(8080, (req, res) => console.log("Running on 8080"));
