@@ -32,10 +32,32 @@
 
 ```
 docker build -t name
+docker run -d -p 8080:8080 name
 ```
 
 ### Without Docker
 
+```
+npm install
+node index.js
+```
+
+## Using ngrok to test webhook
+
+- Download ngrok from its website
+- Unzip folder
+- Navigate into folder and run the following:
+
+```
+ngrok authtoken your_auth_token
+ngrok http 8080
+```
+
+- Get the forwarding link shown on the console
+- Create webhook in the intended github repo, using the link as the 'Payload URL' and set content type to 'application/json'. Select issues to trigger the webhook
+- Now you can create or edit issues in your repo and it will be shown in sheets!
+
 ## What is incompleted/not working fully
 
 - Did not return JSON response, only returned code and a message
+- Encountered some issues when using ngrok and creating the webhook, may have problems connecting
