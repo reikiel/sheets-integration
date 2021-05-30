@@ -1,3 +1,0 @@
-TODO:
-- Find API endpoint that receives webhooks from Github and write them on Google Sheet
-- Create sample repo and test
