@@ -20,12 +20,6 @@ app.get("/", async (req, res) => {
     // instance of sheets API
     const googleSheets = google.sheets({ version: "v4", auth: client });
 
-    // get metadata about spreadsheet
-    const metaData = await googleSheets.spreadsheets.get({
-      auth,
-      spreadsheetId: config.spreadsheetID,
-    });
-
     // read rows from spreadsheet
     const getRows = await googleSheets.spreadsheets.values.get({
       auth,
