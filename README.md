@@ -55,6 +55,7 @@ ngrok http 8080
 
 - Get the forwarding link shown on the console
 - Create webhook in the intended github repo, using the link as the 'Payload URL' and set content type to 'application/json'. Select issues to trigger the webhook
+- Initialize the sheet's headers by sending a GET request to 'http://localhost8080'
 - Now you can create or edit issues in your repo and it will be shown in sheets!
 
 ## What is incompleted/not working fully
