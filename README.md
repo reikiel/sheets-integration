@@ -11,7 +11,7 @@
 ## Technical Documentation
 
 - For API documentation, navigate to public folder and open index.html in your browser
-- For flowchart, navigate to public folder and open
+- For flowchart, navigate to public folder and open Flowchart.png
 
 ## Instructions to run application
 
